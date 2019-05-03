@@ -6,7 +6,7 @@ function get_url(key) {
   let config = require('config');
 
   if (config.has(key)) {
-    var obj = config.get(key);
+    let obj = config.get(key);
 
     if (_.isString(obj)) {
       return new URL(obj);
@@ -20,14 +20,6 @@ function get_url(key) {
       }
 
       return _.assign(new URL("https://localhost"), obj);
-
-      // if (ret.hostname || ret.port || ret.protocol) {
-      //   return url.format({
-      //       hostname  : ret.hostname || 'localhost'
-      //     , port      : ret.port
-      //     , protocol  : ret.protocol || 'http:'
-      //   });
-      // }
     }
   }
 
