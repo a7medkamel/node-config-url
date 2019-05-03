@@ -8,6 +8,8 @@ function get_url(key) {
   if (config.has(key)) {
     let obj = config.get(key);
 
+    obj = _.pickBy(obj, i => !_.isEmpty(i));
+
     if (_.isString(obj)) {
       return new URL(obj);
     }

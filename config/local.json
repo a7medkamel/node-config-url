@@ -2,6 +2,7 @@
   "foo" : "https://user:pass@foo.com/baz",
   "bar" : {
     "hostname" : "bar.com",
-    "pathname" : "fizzbuzz"
+    "pathname" : "fizzbuzz",
+    "password" : null
   }
 }
