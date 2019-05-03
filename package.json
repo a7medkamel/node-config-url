@@ -1,0 +1,28 @@
+{
+  "name": "config-url",
+  "version": "1.0.0",
+  "description": "A plugin that makes node-config handle urls",
+  "main": "index.js",
+  "peerDependencies": {
+    "config": "^3.1.0"
+  },
+  "devDependencies": {
+    "config": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7medkamel/node-config-url.git"
+  },
+  "author": "a7medkamel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a7medkamel/node-config-url/issues"
+  },
+  "homepage": "https://github.com/a7medkamel/node-config-url#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
