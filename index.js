@@ -1,5 +1,5 @@
 var _       = require('lodash')
-  , url     = require('url')
+  , { URL } = require('url')
   ;
 
 function get_url(key) {
