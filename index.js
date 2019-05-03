@@ -2,13 +2,17 @@ var _       = require('lodash')
   , { URL } = require('url')
   ;
 
+function is_primitive(i) {
+  return _.isNumber(i) || (_.isString(i) && !_.isEmpty(i));
+}
+
 function get_url(key) {
   let config = require('config');
 
   if (config.has(key)) {
     let obj = config.get(key);
 
-    obj = _.pickBy(obj, i => _.isNumber(i) || (_.isString(i) && !_.isEmpty(i)));
+    obj = _.pickBy(obj, is_primitive);
 
     if (_.isString(obj)) {
       return new URL(obj);
