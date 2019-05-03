@@ -4,6 +4,7 @@
     "hostname" : "bar.com",
     "pathname" : "fizzbuzz",
     "port" : 1234,
-    "password" : null
+    "password" : null,
+    "protocol" : "proto:"
   }
 }

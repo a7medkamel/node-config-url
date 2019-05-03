@@ -6,26 +6,27 @@ function is_primitive(i) {
   return _.isNumber(i) || (_.isString(i) && !_.isEmpty(i));
 }
 
-function get_url(key) {
+function get_url(key, defaults = {}) {
   let config = require('config');
 
   if (config.has(key)) {
     let obj = config.get(key);
-
-    obj = _.pickBy(obj, is_primitive);
 
     if (_.isString(obj)) {
       return new URL(obj);
     }
 
     if (_.isObject(obj)) {
+      obj = _.chain({}).defaults(obj, defaults).pickBy(is_primitive).value();
+
       let { url } = obj;
 
       if (url) {
         return new URL(url);
       }
 
-      return _.assign(new URL("https://localhost"), obj);
+      let { protocol = 'https:' } = obj;
+      return _.assign(new URL(`${protocol}//localhost`), obj);
     }
   }
 
