@@ -3,6 +3,7 @@
   "bar" : {
     "hostname" : "bar.com",
     "pathname" : "fizzbuzz",
+    "port" : 1234,
     "password" : null
   }
 }
